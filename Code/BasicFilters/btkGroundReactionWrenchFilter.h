@@ -47,7 +47,7 @@ namespace btk
   {
   public:
 
-    enum Location {
+    enum class Location {
         Origin, /// the origin of the forceplate
         COP,    /// the center of pressure
         PWA     /// the point of wrench application (Shimba 1984)
