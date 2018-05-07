@@ -81,7 +81,7 @@ namespace btk
 
     bool m_ThresholdActivated;
     double m_ThresholdValue;
-    Location m_location{ Location::Origin };
+    Location m_location;
   };
 
   inline void GroundReactionWrenchFilter::FinishGRWComputation(Wrench::Pointer grw, const ForcePlatform::Origin& o) const
