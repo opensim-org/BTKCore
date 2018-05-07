@@ -47,11 +47,11 @@ namespace btk
   {
   public:
 
-    enum Location {
-        Origin, /// the origin of the forceplate
-        COP,    /// the center of pressure
-        PWA     /// the point of wrench application (Shimba 1984)
-    };
+      enum Location {
+          Origin, /// the origin of the forceplate
+          COP,    /// the center of pressure
+          PWA     /// the point of wrench application (Shimba 1984)
+      };
 
     typedef btkSharedPtr<GroundReactionWrenchFilter> Pointer;
     typedef btkSharedPtr<const GroundReactionWrenchFilter> ConstPointer;
@@ -81,7 +81,7 @@ namespace btk
 
     bool m_ThresholdActivated;
     double m_ThresholdValue;
-    Location m_location{ Location::Origin };
+    Location m_location;
   };
 
   inline void GroundReactionWrenchFilter::FinishGRWComputation(Wrench::Pointer grw, const ForcePlatform::Origin& o) const

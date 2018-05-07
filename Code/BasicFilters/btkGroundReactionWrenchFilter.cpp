@@ -133,6 +133,7 @@ namespace btk
     this->SetOutputNumber(1);
     this->m_ThresholdActivated = false;
     this->m_ThresholdValue = 0.0;
+    setLocation(Location::Origin);
   };
   
   /**
