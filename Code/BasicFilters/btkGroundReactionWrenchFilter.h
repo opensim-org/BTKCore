@@ -47,11 +47,11 @@ namespace btk
   {
   public:
 
-      enum Location : unsigned {
-          Origin = 0u, /// the origin of the forceplate
-          COP = 1u,    /// the center of pressure
-          PWA = 2u     /// the point of wrench application (Shimba 1984)
-      };
+    enum Location {
+        Origin, /// the origin of the forceplate
+        COP,    /// the center of pressure
+        PWA     /// the point of wrench application (Shimba 1984)
+    };
 
     typedef btkSharedPtr<GroundReactionWrenchFilter> Pointer;
     typedef btkSharedPtr<const GroundReactionWrenchFilter> ConstPointer;
