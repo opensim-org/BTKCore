@@ -47,7 +47,7 @@ namespace btk
   {
   public:
 
-    enum class Location {
+    enum Location {
         Origin, /// the origin of the forceplate
         COP,    /// the center of pressure
         PWA     /// the point of wrench application (Shimba 1984)
@@ -106,11 +106,11 @@ namespace btk
 
     Pz.setZero();
     // Origin of the force plate ix 0, 0,0
-    if (m_location == Location::Origin) {
+    if (m_location == Origin) {
         Px.setZero();
         Py.setZero();
     }
-    else if (m_location == Location::COP) {
+    else if (m_location == COP) {
         Px = -My / Fz;
         Py = Mx / Fz;
         Mx.setZero();
@@ -121,7 +121,7 @@ namespace btk
     // For explanations of the PWA calculation, see Shimba T. (1984), 
     // "An estimation of center of gravity from force platform data", 
     // Journal of Biomechanics 17(1), 53–60.
-    else if (m_location == Location::PWA) {
+    else if (m_location == PWA) {
         Px = (Fy * Mz - Fz * My) / sNF - (Fx.square() * My - Fx * (Fy * Mx)) / (sNF * Fz);
         Py = (Fz * Mx - Fx * Mz) / sNF - (Fx * (Fy * My) - Fy.square() * Mx) / (sNF * Fz);
 
